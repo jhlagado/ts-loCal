@@ -1,4 +1,3 @@
-// import 'regenerator-runtime/runtime';
 import { inputBuffer, outputBuffer, setOutputBuffer } from "./io";
 import { interpReset, interpret } from "./interpreter";
 import { escapeHTML } from "./utils";

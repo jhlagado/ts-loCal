@@ -1,7 +1,0 @@
-node_modules/
-coverage/
-.cache/
-.vscode/
-dist/
-.yarnrc
-yarn.lock

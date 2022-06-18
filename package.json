@@ -1,16 +1,21 @@
 {
   "name": "my-project",
   "source": "src/index.html",
-  "license": "GPL",
+  "license": "GPL-3.0-or-later",
   "scripts": {
     "start": "yarn parcel src/index.html",
     "build": "parcel build src/index.ts",
-    "test": "npm run lint && jest --coverage",
+    "test": "jest --coverage",
     "lint": "eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",
     "ci": "yarn build && yarn test && yarn lint"
   },
   "devDependencies": {
-    "parcel": "latest",
-    "eslint": "latest"
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "eslint": "latest",
+    "parcel": "latest"
+  },
+  "dependencies": {
+    "jest": "^28.1.1",
+    "ts-jest": "^28.0.5"
   }
 }
