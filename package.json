@@ -1,0 +1,16 @@
+{
+  "name": "my-project",
+  "source": "src/index.html",
+  "license": "GPL",
+  "scripts": {
+    "build": "parcel build src/index.ts",
+    "test": "jest",
+    "lint": "eslint",
+    "check": "tsc --noEmit",
+    "ci": "yarn build && yarn test && yarn lint && yarn check"
+  },
+  "devDependencies": {
+    "parcel": "latest",
+    "eslint": "latest"
+  }
+}
