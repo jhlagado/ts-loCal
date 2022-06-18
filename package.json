@@ -3,11 +3,11 @@
   "source": "src/index.html",
   "license": "GPL",
   "scripts": {
+    "start": "yarn parcel src/index.html",
     "build": "parcel build src/index.ts",
-    "test": "jest",
-    "lint": "eslint",
-    "check": "tsc --noEmit",
-    "ci": "yarn build && yarn test && yarn lint && yarn check"
+    "test": "npm run lint && jest --coverage",
+    "lint": "eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",
+    "ci": "yarn build && yarn test && yarn lint"
   },
   "devDependencies": {
     "parcel": "latest",

@@ -19,7 +19,6 @@ export const interpReset = (): void => {
     state.oldHere = START_PROG;
     state.sp = 140 * CELL;
     state.rp = 20 * CELL;
-    // console.log('state', JSON.stringify(state));
 };
 
 const interpTick = (_restart?: boolean): boolean => {

@@ -30,11 +30,6 @@ export const initListeners = (): void => {
     });
 };
 
-export const setPrompt = (text: string): void => {
-    const prompt = document.getElementById('prompt');
-    prompt!.innerText = text;
-};
-
 export const log = (message: string): void => {
     const output = document.getElementById('output');
     output!.innerHTML += `<div class='log'><p>${message}</p></div>`;

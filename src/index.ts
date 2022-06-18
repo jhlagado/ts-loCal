@@ -2,7 +2,7 @@
 import { inputBuffer, outputBuffer, setOutputBuffer } from "./io";
 import { interpReset, interpret } from "./interpreter";
 import { escapeHTML } from "./utils";
-import { initListeners, log, setPrompt } from "./dom";
+import { initListeners, log } from "./dom";
 
 initListeners();
 
@@ -26,14 +26,11 @@ log(
         title="An implementation of the loCal language in Typescript by John Hardy ">(?)</a>`
 );
 interpReset();
-setPrompt(getPrompt());
 
 const loop2 = async () => {
-  const oldPrompt = getPrompt();
   const oldInputBuffer = inputBuffer;
   if (await interpret()) {
-    log(`${oldPrompt} ${escapeHTML(oldInputBuffer)}`);
-    setPrompt(getPrompt());
+    log(`> ${escapeHTML(oldInputBuffer)}`);
   }
   setTimeout(loop2);
 };
